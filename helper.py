@@ -15,7 +15,7 @@ import aiohttp
 
 df=pd.read_csv("TimesUsed.csv")
 
-devid=["superice0","darkdare0926","nokken29"]
+devid=["superice0","darkdare0926","nokken29","brokenthunder"]
 
 
 
