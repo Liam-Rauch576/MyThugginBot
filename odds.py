@@ -43,7 +43,7 @@ async def start_odds(bot, msg):
         reply = await bot.wait_for('message', check=check, timeout=30.0)
     except asyncio.TimeoutError:
         await msg.channel.send(f"T O O L A T E {msg.author.mention}, Y O U L O S E")
-        await msg.author.timeout(datetime.timedelta(minutes=5))
+        await msg.author.timeout(datetime.timedelta(seconds = 30))
         return
     finally: 
         active_players.discard(msg.author.id)
@@ -61,3 +61,6 @@ async def start_odds(bot, msg):
             await msg.author.timeout(datetime.timedelta(minutes=timeoutValue), reason = "B A D A T O D D S")
         except discord.errors.Forbidden:
             pass
+    else: 
+        await msg.channel.send(f"{msg.author.mention} - S A F E")
+        return
