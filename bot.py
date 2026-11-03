@@ -48,8 +48,6 @@ async def on_message(msg):
             return
         else: 
             await helper.process_msg(msg,token)
-    elif msg.channel.name in ('workouts-and-fitness', 'grinch-workout-and-fitness','geh-workout-and-conditioning'):
-        await helper.process_workout(msg,token)
     elif msg.channel.name in ('grinch-team-chat'):
         temp=random.randint(1,199)
         if temp==52:
