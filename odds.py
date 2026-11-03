@@ -11,9 +11,9 @@ def odds_helper (oddsLength):
     elif 3 <= oddsLength <= 10: 
         return 5
     elif 10 < oddsLength <= 20: 
-        return 15
+        return 10
     else: 
-        return 100
+        return 15
 
 async def start_odds(bot, msg):
     parts = msg.content.split()
